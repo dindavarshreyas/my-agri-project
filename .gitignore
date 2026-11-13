@@ -1,0 +1,73 @@
+# ==============================================================================
+# .gitignore: AI-Powered Agriculture Crop Advisory Assistant
+# ==============================================================================
+
+# 1. Environment Variables & Secrets (CRITICAL: Never commit credentials)
+.env
+.env.*
+*.env
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+server/.env
+client/.env
+
+# Explicitly keep example/template environment files tracked in git
+!.env.example
+!server/.env.example
+!client/.env.example
+
+# 2. Dependencies
+node_modules/
+*/node_modules/
+.pnp
+.pnp.js
+
+# 3. Production Build & Output Directories
+dist/
+build/
+out/
+client/dist/
+client/build/
+
+# 4. Vite & Bundler Cache
+.vite/
+client/.vite/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+
+# 5. Logs & Debug Output
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 6. Test & Coverage Reports
+coverage/
+.nyc_output/
+
+# 7. Operating System Metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# 8. IDE & Code Editor Configurations
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+*.swp
+*.swo
+*~

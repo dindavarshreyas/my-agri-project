@@ -1,0 +1,22 @@
+{
+  "name": "agri-crop-advisory-assistant",
+  "version": "1.0.0",
+  "description": "AI-Powered Agriculture Crop Advisory Assistant using React, Node.js, Express, Supabase, and Google Gen AI SDK",
+  "main": "server/src/index.js",
+  "scripts": {
+    "migrate": "node scripts/apply-migrations.js",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "server": "node server/src/index.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"API,WEB\" -c \"cyan,green\" \"node server/src/index.js\" \"npm --prefix client run dev\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "author": "AgriAI Systems",
+  "license": "MIT"
+}
